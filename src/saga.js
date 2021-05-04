@@ -14,7 +14,6 @@ function* fetchUser(action) {
 
     yield put({ type: "FETCHED_USERS", payload: users });
   } catch (e) {
-    console.log(e);
     yield put({ type: "FETCHED_ERROR", payload: e.message });
   }
 }
